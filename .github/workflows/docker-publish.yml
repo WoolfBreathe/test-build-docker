@@ -14,7 +14,7 @@ env:
   REGISTRY: Docker.io
   # github.repository as <account>/<repo>
   IMAGE_NAME: ${{ github.ref_name }}
-  IMAGE_VERSION: echo ${{ github.tags }} | sed -e 's/^v$GITHUB_REF//'
+  IMAGE_VERSION: echo ${{ github.tags }} | sed -e 's/^v${{ GITHUB_REF }}//'
 
 
 jobs:
