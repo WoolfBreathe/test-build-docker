@@ -1,3 +1,3 @@
 #!/usr/bin/env sh
 
-export TEXT=test
+export TEXT="test"

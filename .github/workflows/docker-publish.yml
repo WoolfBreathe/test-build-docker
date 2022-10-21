@@ -37,4 +37,6 @@ jobs:
           
           ./env.sh
 
-          echo $TEXT
+          echo ${TEXT}
+
+          echo 111111111
