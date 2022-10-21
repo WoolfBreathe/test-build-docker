@@ -35,7 +35,7 @@ jobs:
         
           chmod +x ./env.sh 
           
-          ./env.sh
+          source ./env.sh
 
           echo ${TEXT}
 
