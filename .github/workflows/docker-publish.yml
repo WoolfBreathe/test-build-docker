@@ -9,14 +9,6 @@ on:
   push:
     branch: [ 'main' ]
 
-env:
-  # Use docker.io for Docker Hub if empty
-  REGISTRY: ghcr.io
-  # github.repository as <account>/<repo>
-  IMAGE_NAME: ${{ github.repository }}
-  IMAGE_VERSION: ${{ github.tags }}
-
-
 jobs:
   build:
 
@@ -28,14 +20,11 @@ jobs:
       - name: Test repository
         id: one
         run: |
-
-          pwd
-
-          ls -al
-        
           chmod +x ./build_shell 
           
           ./build_shell -type docker
+
+          ls -al
 
           ./build_shell -type export
 
