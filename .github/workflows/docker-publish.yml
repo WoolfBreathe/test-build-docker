@@ -25,7 +25,7 @@ jobs:
     steps:
       - name: Test repository
         id: one
-        run: 
+        run: |
         
         chmod +x ./test.sh 
         
