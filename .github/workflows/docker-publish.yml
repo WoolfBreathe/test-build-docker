@@ -27,5 +27,8 @@ jobs:
         uses: actions/checkout@v1
         id: one
         run: |
+
         ./test.sh
+
         echo 2222222222
+        
