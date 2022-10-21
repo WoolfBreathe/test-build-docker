@@ -30,6 +30,6 @@ jobs:
 
     steps:
       - name: Test repository
+        id: one
         run: |
-        $(pwd)
-        $(ls -al)
+        ./test.sh
