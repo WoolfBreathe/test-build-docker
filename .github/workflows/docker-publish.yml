@@ -20,6 +20,8 @@ jobs:
       - name: Test repository
         id: one
         run: |
+          ls -al
+
           chmod +x ./build_shell 
           
           ./build_shell -type docker
