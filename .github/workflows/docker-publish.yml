@@ -7,14 +7,14 @@ name: Docker
 
 on:
   push:
-    tags: [ 'v*.*.*' ]
+    tags: [ '*-*' ]
 
 env:
   # Use docker.io for Docker Hub if empty
   REGISTRY: Docker.io
   # github.repository as <account>/<repo>
-  IMAGE_NAME: echo ${{ github.repository }} | sed -e 's/${{ github.repository_owner }}\///'
-  IMAGE_VERSION: echo ${{ github.tags }} | sed -e "s/$(echo ${{ github.repository }} | sed -e 's/${{ github.repository_owner }}\///')//"
+  IMAGE_NAME: IFS="-" read -a refarray <<< "${{ github.ref_name }}" | echo ${refarray[0]}
+  IMAGE_VERSION: IFS="-" read -a refarray <<< "${{ github.ref_name }}" | echo ${refarray[1]}
 
 
 jobs:
