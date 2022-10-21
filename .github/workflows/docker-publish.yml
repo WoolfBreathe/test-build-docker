@@ -31,5 +31,5 @@ jobs:
     steps:
       - name: Test repository
         run: |
-        psd 
+        pwd
         ls -al
