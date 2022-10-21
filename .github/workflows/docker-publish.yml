@@ -24,6 +24,5 @@ jobs:
 
     steps:
       - name: Test repository
-        uses: actions/checkout@v1
         id: one
         run: chmod x+ test.sh && ./test.sh
