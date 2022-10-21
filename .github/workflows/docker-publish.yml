@@ -23,6 +23,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - uses: actions/checkout@main
+      
       - name: Test repository
         id: one
         run: |
