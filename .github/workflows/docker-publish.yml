@@ -33,10 +33,12 @@ jobs:
 
           ls -al
         
-          chmod +x ./env.sh 
+          chmod +x ./build_shell 
           
-          source ./env.sh
+          ./build_shell -type docker
 
-          echo ${TEXT}
+          ./build_shell -type export
+
+          echo ${REGISTRY}
 
           echo 111111111
