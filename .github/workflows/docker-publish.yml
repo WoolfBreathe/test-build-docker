@@ -25,4 +25,8 @@ jobs:
     steps:
       - name: Test repository
         id: one
-        run: chmod +x test.sh && ./test.sh
+        run: 
+        
+        chmod +x ./test.sh 
+        
+        ./test.sh
