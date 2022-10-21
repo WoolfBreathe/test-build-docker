@@ -26,9 +26,4 @@ jobs:
       - name: Test repository
         uses: actions/checkout@v1
         id: one
-        run: |
-
-        ./test.sh
-
-        echo 2222222222
-        
+        run: ./test.sh
