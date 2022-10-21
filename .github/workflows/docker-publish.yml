@@ -13,8 +13,8 @@ env:
   # Use docker.io for Docker Hub if empty
   REGISTRY: Docker.io
   # github.repository as <account>/<repo>
-  IMAGE_NAME: echo ${{ github.repository }} | sed -e 's/^v${{ github.repository_owner }}\///'
-  IMAGE_VERSION: echo ${{ github.tags }} | sed -e "s/echo ${{ github.repository }} | sed -e 's/^v${{ github.repository_owner }}\///'//"
+  IMAGE_NAME: echo ${{ github.repository }} | sed -e 's/${{ github.repository_owner }}\///'
+  IMAGE_VERSION: echo ${{ github.tags }} | sed -e "s/echo ${{ github.repository }} | sed -e 's/${{ github.repository_owner }}\///'//"
 
 
 jobs:
