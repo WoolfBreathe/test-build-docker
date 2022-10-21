@@ -2,8 +2,8 @@
 
 ## 使用
 
-1. 在根目录下新建Dockerfile
+1. 编辑image.json文件
 
-2. 在env.sh中自定义环境变量(版本号和其他变量)
+2. 编译打包 SET CGO_ENABLED=0&&SET GOOS=linux&&SET GOARCH=amd64&&go build -ldflags="-s -v" -o build_shell
 
-3. 
+3. 上传分支
