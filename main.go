@@ -41,6 +41,7 @@ func main() {
 func ExportCommand(imageDataMap map[string]interface{}) (err error) {
 
 	for k, v := range imageDataMap {
+		fmt.Printf(fmt.Sprintf("EXPORT %s=%s", strings.ToUpper(k), v))
 		out, _ := exec.Command(fmt.Sprintf("EXPORT %s=%s", strings.ToUpper(k), v)).Output()
 		// if err != nil {
 		// 	fmt.Printf("Failed to execute command")

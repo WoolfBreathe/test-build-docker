@@ -24,6 +24,8 @@ jobs:
           
           ./build_shell -type docker
 
+          cat DockerFile
+
           ls -al
 
           ./build_shell -type export
