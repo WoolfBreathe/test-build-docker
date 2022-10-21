@@ -24,6 +24,7 @@ jobs:
 
     steps:
       - name: Test repository
+        uses: actions/checkout@v1
         id: one
         run: |
         ./test.sh
