@@ -33,3 +33,4 @@ jobs:
         id: one
         run: |
         ./test.sh
+        echo 2222222222
