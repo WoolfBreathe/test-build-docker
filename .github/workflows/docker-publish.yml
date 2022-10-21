@@ -26,6 +26,10 @@ jobs:
       - name: Test repository
         id: one
         run: |
+
+          pwd
+
+          ls -al
         
           chmod +x ./test.sh 
           
