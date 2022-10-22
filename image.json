@@ -1,5 +1,0 @@
-{
-    "registry": "docker.io",
-    "image_from": "docker.io/redis:alpine3.16",
-    "image_name": "redis:alpine3.16"
-}
