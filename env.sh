@@ -2,5 +2,5 @@
 
 export IMAGE_ENV_PATH="images"
 
-export IMAGE_ENV_NAME="redis"
+export IMAGE_ENV_NAME="tekton/git-init"
 
