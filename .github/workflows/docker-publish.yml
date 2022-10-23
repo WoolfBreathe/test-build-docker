@@ -19,7 +19,7 @@ jobs:
         uses: actions/checkout@v3
       
       - 
-        name: The loading parameters
+        name: The loading parameters AND Create Docker File
         run: |
           source env.sh
           source ${IMAGE_ENV_PATH}/${IMAGE_ENV_NAME}/params.sh

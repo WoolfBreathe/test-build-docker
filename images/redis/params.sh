@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env sh
 
 export IMAGE_FROM="docker.io/redis:alpine3.16"
 

@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env sh
 
 export IMAGE_ENV_PATH="images"
 

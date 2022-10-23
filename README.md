@@ -2,8 +2,10 @@
 
 ## 使用
 
-1. 编辑image.json文件
+1. 编辑env.sh文件 写入要生成镜像的路径
 
-2. 编译打包 SET CGO_ENABLED=0&&SET GOOS=linux&&SET GOARCH=amd64&&go build -ldflags="-s -v" -o build_shell
+2. 编辑镜像的参数文件
 
-3. 上传分支
+3. 上传代码
+
+4. 使用pull.sh拉取镜像
