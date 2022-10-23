@@ -1,4 +1,6 @@
 #!/bin/sh
 
-export IMAGE_ENV_PATH="images/redis/"
+export IMAGE_ENV_PATH="images"
+
+export IMAGE_ENV_NAME="redis"
 

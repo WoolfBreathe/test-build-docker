@@ -7,31 +7,39 @@ name: Test
 
 on:
   push:
-    branch: [ 'main' ]
-
+    branch: [ 'mkimage' ]
 jobs:
   build:
 
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
-
-      - name: Test repository
-        id: one
+      -
+        name: Checkout 
+        uses: actions/checkout@v3
+      
+      - 
+        name: The loading parameters
         run: |
-          ls -al
+          source env.sh
+          source ${IMAGE_ENV_PATH}/${IMAGE_ENV_NAME}/params.sh
 
-          chmod +x ./build_shell 
-          
-          ./build_shell -type docker
+          echo "image_name=${IMAGE_TO}" >> $GITHUB_ENV
+      -
+        name: Login to Docker Hub
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKER_HUB_USERNAME }}
+          password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
+      -
+        name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
+      -
+        name: Build and push
+        uses: docker/build-push-action@v3
+        with:
+          context: .
+          file: ./Dockerfile
+          push: true
+          tags: ${{ env.IMAGE_TO }}
 
-          cat Dockerfile
-
-          ls -al
-
-          ./build_shell -type export
-
-          echo ${REGISTRY}
-
-          echo 111111111
