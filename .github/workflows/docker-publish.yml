@@ -26,12 +26,7 @@ jobs:
 
           echo "image_name=${IMAGE_TO}" >> $GITHUB_ENV
 
-      - 
-        name: Create Docker File
-        run: |
-          chmod +x mkdockerfile.sh
-
-          ./mkdockerfile.sh
+          echo "FROM ${IMAGE_FROM}" > Dockerfile 
 
       -
         name: Login to Docker Hub
@@ -43,7 +38,7 @@ jobs:
       -
         name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2
-        
+
       -
         name: Build and push
         uses: docker/build-push-action@v3
