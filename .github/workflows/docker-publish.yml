@@ -7,7 +7,7 @@ name: Test
 
 on:
   push:
-    branch: [ 'mkimage' ]
+    branch: [ 'main' ]
 jobs:
   build:
 
@@ -41,5 +41,5 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: ${{ env.IMAGE_TO }}
+          tags: ${{ env.image_name }}
 
