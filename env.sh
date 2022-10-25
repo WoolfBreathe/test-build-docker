@@ -2,5 +2,5 @@
 
 export IMAGE_ENV_PATH="images"
 
-export IMAGE_ENV_NAME="knative/opeartor"
+export IMAGE_ENV_NAME="knative/operator-webhook"
 
