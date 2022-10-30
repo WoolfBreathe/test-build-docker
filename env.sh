@@ -2,5 +2,5 @@
 
 export IMAGE_ENV_PATH="images"
 
-export IMAGE_ENV_NAME="tekton/kaniko"
+export IMAGE_ENV_NAME="tekton/workingdirinit"
 
